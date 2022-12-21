@@ -5,13 +5,13 @@ Automating a daily production report with data analysis and on site support logs
 
 
 ## Unit Count and Percentage Count
-<img src="app_imgs/countperc.png" width="1100"/>   
+<img src="script_imgs/countperc.png" width="1100"/>   
 
 
 ## Comparing Items Completed as Finish Good & Items QC'ed
-<img src="app_imgs/chart.png" width="1100"/>   
+<img src="script_imgs/chart.png" width="1100"/>   
 
 
 ## Onsite Support Problem Logs
-<img src="app_imgs/userlog.png" width="1100"/> 
+<img src="script_imgs/userlog.png" width="1100"/> 
 
