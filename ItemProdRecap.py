@@ -72,9 +72,9 @@ service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
 
 #Getting access to sheet with template
-source_spreadsheet_id = '1UEssHGlZz8w-iuZTK5guT7VMYN3OO8NY3ufZPoilRT4'
-target_spreadsheet_id = '1SMANrp8dgZO5V6RDGiIbc7qBzvRIguO_gPQXKt3NJls'
-worksheet_id = '1028934843'
+source_spreadsheet_id = '*'
+target_spreadsheet_id = '*'
+worksheet_id = '*'
 
 #Pasting template to target google sheet
 service.spreadsheets().sheets().copyTo(
@@ -101,7 +101,7 @@ print("Template has been copied")
 
 
 # Get MC Pack Events from Todays Date
-df = pd.read_html('https://rfa.tile.hiveplatform.org/mc_pack_event?cell_id=&page_size=25000&offset=0',parse_dates=['mc_pack_event_timestamp'])[0]
+df = pd.read_html('*',parse_dates=['mc_pack_event_timestamp'])[0]
 df['date'] = pd.to_datetime(df['mc_pack_event_timestamp'], format="%H:%M")
 #print("Enter Todays date")
 #start_date=input("'yyyy-mm-dd': ")
