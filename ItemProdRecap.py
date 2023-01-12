@@ -125,7 +125,7 @@ gc = gspread.oauth()
 sh = gc.open("TileProd")
 
 #Grabbing the Copy of Template worksheet and renaming it 
-spreadsheetId = '1SMANrp8dgZO5V6RDGiIbc7qBzvRIguO_gPQXKt3NJls'
+spreadsheetId = '*'
 wsh = gc.open_by_key(spreadsheetId).worksheet("Copy of Template")
 # update your worksheet name:
 title = "Test"
@@ -209,12 +209,12 @@ def line1Kit():
     set_with_dataframe(worksheet, bo9, row=12, col=4, include_column_header=False)
 
 def missed1():
-    df1 = pd.read_html('https://rfa.tile.hiveplatform.org/bc_scan_event?cell_id=tile-line1-qc&page_size=2000&offset=0')[0]
-    df2 = pd.read_html('https://rfa.tile.hiveplatform.org/bc_scan_event?cell_id=tile-line2-qc&page_size=2000&offset=0')[0]
-    df3 = pd.read_html('https://rfa.tile.hiveplatform.org/bc_scan_event?cell_id=tile-line3-qc&page_size=2000&offset=0')[0]
-    df4 = pd.read_html('https://rfa.tile.hiveplatform.org/bc_scan_event?cell_id=tile-line4-qc&page_size=2000&offset=0')[0]
-    df5 = pd.read_html('https://rfa.tile.hiveplatform.org/bc_scan_event?cell_id=tile-line5-qc&page_size=2000&offset=0')[0]
-    df6 = pd.read_html('https://rfa.tile.hiveplatform.org/bc_scan_event?cell_id=tile-line6-qc&page_size=2000&offset=0')[0]
+    df1 = pd.read_html('*')[0]
+    df2 = pd.read_html('*')[0]
+    df3 = pd.read_html('*')[0]
+    df4 = pd.read_html('*')[0]
+    df5 = pd.read_html('*')[0]
+    df6 = pd.read_html('*')[0]
     
     df1['date'] = pd.to_datetime(df1['scan_event_timestamp'], format="%Y-%m-%d %H:%M:%S")
     df2['date'] = pd.to_datetime(df2['scan_event_timestamp'], format="%Y-%m-%d %H:%M:%S")
@@ -356,7 +356,7 @@ def line2Kit():
     set_with_dataframe(worksheet, bo9, row=12, col=6, include_column_header=False)
 
 def missed2():
-    df2 = pd.read_html('https://rfa.tile.hiveplatform.org/bc_scan_event?cell_id=tile-line2-qc&page_size=2000&offset=0')[0]
+    df2 = pd.read_html('*')[0]
     
     df2['date'] = pd.to_datetime(df2['scan_event_timestamp'], format="%Y-%m-%d %H:%M:%S")
     
@@ -494,7 +494,7 @@ def line3Kit():
     set_with_dataframe(worksheet, bo9, row=12, col=8, include_column_header=False)
 
 def missed3():
-    df3 = pd.read_html('https://rfa.tile.hiveplatform.org/bc_scan_event?cell_id=tile-line3-qc&page_size=2000&offset=0')[0]
+    df3 = pd.read_html('*')[0]
     
     df3['date'] = pd.to_datetime(df3['scan_event_timestamp'], format="%Y-%m-%d %H:%M:%S")
     
@@ -632,7 +632,7 @@ def line4Kit():
     set_with_dataframe(worksheet, bo9, row=12, col=10, include_column_header=False)
 
 def missed4():
-    df4 = pd.read_html('https://rfa.tile.hiveplatform.org/bc_scan_event?cell_id=tile-line4-qc&page_size=2000&offset=0')[0]
+    df4 = pd.read_html('*')[0]
     
     df4['date'] = pd.to_datetime(df4['scan_event_timestamp'], format="%Y-%m-%d %H:%M:%S")
     
@@ -770,7 +770,7 @@ def line5Kit():
     set_with_dataframe(worksheet, bo9, row=12, col=12, include_column_header=False)
 
 def missed5():
-    df5 = pd.read_html('https://rfa.tile.hiveplatform.org/bc_scan_event?cell_id=tile-line5-qc&page_size=2000&offset=0')[0]
+    df5 = pd.read_html('*')[0]
     
     df5['date'] = pd.to_datetime(df5['scan_event_timestamp'], format="%Y-%m-%d %H:%M:%S")
     
@@ -909,7 +909,7 @@ def line6Kit():
     wait
 
 def missed6():
-    df6 = pd.read_html('https://rfa.tile.hiveplatform.org/bc_scan_event?cell_id=tile-line6-qc&page_size=2000&offset=0')[0]
+    df6 = pd.read_html('*')[0]
     
     df6['date'] = pd.to_datetime(df6['scan_event_timestamp'], format="%Y-%m-%d %H:%M:%S")
     
